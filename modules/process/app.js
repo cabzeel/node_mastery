@@ -45,3 +45,8 @@ process.on('warning', (warning) => {
 
 //trigger the warning with the process.emitWarning():
 process.emitWarning('Hehehe, triggered my own warning', 'pretty cool super power')
+
+//process.stdout.write and process.stderr.write let you write directly to the standard output and standard error streams, without the automatic newline that console.log adds:
+process.stdout.write("Hello ");
+process.stdout.write("World\n"); // newline only when you add \n
+process.stderr.write("Something went wrong\n");
